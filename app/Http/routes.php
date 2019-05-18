@@ -1,5 +1,7 @@
 <?php
-
+use App\User;
+use App\article;
+use App\comment;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,5 +14,5 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    echo $all=comment::all(); 
 });
