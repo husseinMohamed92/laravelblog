@@ -16,3 +16,11 @@ use App\comment;
 Route::get('/', function () {
     echo $all=comment::all(); 
 });
+Route::get('main',function()
+{
+    return view('main');
+});
+Route::post('register','userConrtoller@registerUser');
+Route::post('login','userConrtoller@loginUser');
+
+Route::post('login','articleConrtoller@loginUser');

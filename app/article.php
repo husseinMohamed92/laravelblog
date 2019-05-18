@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class article extends Model
 {
     //
+    //public $timestamps = null;
     public function comment()
     {
         return $this->hasmany('App\comment');
