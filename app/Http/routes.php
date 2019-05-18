@@ -14,7 +14,7 @@ use App\comment;
 */
 
 Route::get('/', function () {
-    echo $all=comment::all(); 
+    return view('layouts.app');
 });
 Route::get('main',function()
 {
@@ -23,4 +23,11 @@ Route::get('main',function()
 Route::post('register','userConrtoller@registerUser');
 Route::post('login','userConrtoller@loginUser');
 
-Route::post('login','articleConrtoller@loginUser');
+Route::get('allarticles','articleConrtoller@showallarticle');
+Route::get('myarticles','articleConrtoller@showmyarticle');
+Route::get('addarticles','articleConrtoller@addarticle');
+Route::post('addarticles','articleConrtoller@addarticle');
+
+
+Route::auth();
+Route::get('/home', 'HomeController@index');
