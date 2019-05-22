@@ -29,5 +29,8 @@ Route::get('addarticles','articleConrtoller@addarticle');
 Route::post('addarticles','articleConrtoller@addarticle');
 
 
+Route::post('/addcomment','commentsController@addcomment');
+
+
 Route::auth();
 Route::get('/home', 'HomeController@index');
